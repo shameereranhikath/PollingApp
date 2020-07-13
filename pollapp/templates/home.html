@@ -7,12 +7,12 @@
           <li class=" p-1 mt-15 list-group-item bg-secondary" style="color:antiquewhite;">Available Polls</li>
           <li class="list-group-item">Second item
 
-               <a href="" class="btn btn-secondary btn-sm mr-8"> view results</a>
-              <a href="" class="btn btn-primary btn-sm mr-2"> vote</a>
+               <a href="{% url 'pollapp:results' 1 %}" class="btn btn-secondary btn-sm mr-8"> view results</a>
+              <a href="{% url 'pollapp:vote' 1 %}" class="btn btn-primary btn-sm mr-2"> vote</a>
           </li>
           <li class="list-group-item">Third item
-           <a href="" class="btn btn-secondary btn-sm mr-8"> view results</a>
-              <a href="" class="btn btn-primary btn-sm mr-2"> vote</a>
+           <a href="{% url 'pollapp:results' 2 %}" class="btn btn-secondary btn-sm mr-8"> view results</a>
+              <a href="{% url 'pollapp:vote' 2 %}" class="btn btn-primary btn-sm mr-2"> vote</a>
           </li>
 
         </ul>

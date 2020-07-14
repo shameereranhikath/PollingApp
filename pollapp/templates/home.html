@@ -5,15 +5,18 @@
     <div class="col-lg-8 offset-lg-2">
         <ul class="list-group">
           <li class=" p-1 mt-15 list-group-item bg-secondary" style="color:antiquewhite;">Available Polls</li>
-          <li class="list-group-item">Second item
+            {% for dt in poll %}
 
-               <a href="{% url 'pollapp:results' 1 %}" class="btn btn-secondary btn-sm mr-8"> view results</a>
-              <a href="{% url 'pollapp:vote' 1 %}" class="btn btn-primary btn-sm mr-2"> vote</a>
+          <li class="list-group-item">{{dt.question}}
+
+               <a href="{% url 'pollapp:results' dt.id %}" class="btn btn-secondary btn-sm mr-8"> view results</a>
+              <a href="{% url 'pollapp:vote' dt.id %}" class="btn btn-primary btn-sm mr-2"> vote</a>
           </li>
-          <li class="list-group-item">Third item
-           <a href="{% url 'pollapp:results' 2 %}" class="btn btn-secondary btn-sm mr-8"> view results</a>
-              <a href="{% url 'pollapp:vote' 2 %}" class="btn btn-primary btn-sm mr-2"> vote</a>
-          </li>
+            {% endfor%}
+<!--          <li class="list-group-item">Third item-->
+<!--           <a href="{% url 'pollapp:results' 2 %}" class="btn btn-secondary btn-sm mr-8"> view results</a>-->
+<!--              <a href="{% url 'pollapp:vote' 2 %}" class="btn btn-primary btn-sm mr-2"> vote</a>-->
+<!--          </li>-->
 
         </ul>
     </div>

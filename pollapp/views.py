@@ -56,7 +56,7 @@ def jsonresults(request, poll_id):
     polllist.append({poll.option_one: poll.option_one_count})
     polllist.append({poll.option_two: poll.option_two_count})
     polllist.append({poll.option_three: poll.option_three_count})
-    print(polllist)
+    # print(polllist)
     return JsonResponse(polllist, safe=False)
 
     # context = {'poll': poll}
